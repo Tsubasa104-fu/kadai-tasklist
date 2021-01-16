@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: kadai-tasklist6_production
   username: kadai-tasklist6
   password: <%= ENV['KADAI-TASKLIST6_DATABASE_PASSWORD'] %>
